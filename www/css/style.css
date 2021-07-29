@@ -9,8 +9,6 @@
     --colorDarkGreyLighter: #2b3439;
     --colorLight: #fafeff;
     --colorLightSecond: #E3E9Ec;
-
-
 }
 
 body {
@@ -27,11 +25,9 @@ body {
 }
 
 .calculator {
-
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
     border-radius: 0.5em;
     overflow: hidden;
-
 }
 
 .calculator__display {
@@ -45,11 +41,11 @@ body {
     height: 160px;
     padding: 1rem;
     font-size: 24px;
-  }
+}
 
 .display__result {
     font-size: 32px;
-  }
+}
 
 .calculator__keys {
     color: var(--colorLightSecond);
@@ -64,10 +60,11 @@ body {
     "seven eight nine times"
     "four five six minus"
     "one two three plus"
-    "zero decimal equal equal";
+    "zero decimal backspace equal";
     align-items: center;
-    ;
     justify-content: space-around;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 
@@ -75,6 +72,11 @@ body {
     grid-area: clear;
     color: var(--colorOrange)
   }
+
+  .backspace {
+   grid-area: backspace;
+   color: var(--colorOrange)
+}
 
 .bracket__right {
     grid-area: bracket__right ;
@@ -90,7 +92,7 @@ body {
 }
 .one {
     grid-area: one;
-  }
+}
 .two {
     grid-area: two;
   }
@@ -101,8 +103,8 @@ body {
     grid-area: four;
   }
 .five {
-    grid-area: five;
-  }
+    grid-area: five; 
+}
 .six {
     grid-area: six;
   }
@@ -130,13 +132,12 @@ body {
     border-radius: 20px;
     background-color: rgba(43, 52, 57, 0.2);
     opacity: 0.8;
-
   }
 
 .minus {
-      grid-area: times;
-      color: var(--colorOrange);
-  }
+    grid-area: times;
+    color: var(--colorOrange);
+}
 
 .plus {
     grid-area: minus;
@@ -146,4 +147,17 @@ body {
 .times {
     grid-area: plus;
     color: var(--colorOrange);
+}
+
+.button {
+  cursor: pointer;
+  padding: 20px;
+}
+
+.button:hover {
+    color: var(--colorBlue);
+}
+
+.button:active {
+  font-weight: 900;
 }
