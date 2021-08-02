@@ -37,10 +37,11 @@ body {
     justify-content: flex-end;
     background-color: var(--colorDarkGrey);
     color: var(--colorOrange);
-    width: 320px;
+    width: 400px;
     height: 160px;
     padding: 1rem;
     font-size: 24px;
+    padding-right: 2rem;
 }
 
 .display__result {
@@ -54,26 +55,25 @@ body {
     background: var(--colorDarkGreyLighter);
     display: grid;
     grid-gap: 2px;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-template-areas: 
     "clear bracket__right bracket__left divide"
     "seven eight nine times"
     "four five six minus"
     "one two three plus"
-    "zero decimal backspace equal";
+    "zero decimal backspace equals";
     align-items: center;
     justify-content: space-around;
     font-size: 20px;
     font-weight: 400;
 }
 
-
 .clear {
     grid-area: clear;
     color: var(--colorOrange)
   }
 
-  .backspace {
+.backspace {
    grid-area: backspace;
    color: var(--colorOrange)
 }
@@ -124,8 +124,8 @@ body {
     grid-area: decimal;
   }
  
-.equal {
-    grid-area: equal;
+.equals {
+    grid-area: equals;
     color: var(--colorOrange);
     opacity: 0.8;
     border: 0;
@@ -149,15 +149,15 @@ body {
     color: var(--colorOrange);
 }
 
-.button {
+.key {
   cursor: pointer;
   padding: 20px;
 }
 
-.button:hover {
+.key:hover {
     color: var(--colorBlue);
 }
 
-.button:active {
+.key:active {
   font-weight: 900;
 }
