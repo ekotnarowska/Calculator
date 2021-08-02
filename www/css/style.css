@@ -49,14 +49,15 @@ body {
 }
 
 .calculator__keys {
-    
+
     padding: 0.75rem 1.5rem;
-    height: 400px;
+    height:auto;
     background: var(--colorDarkGreyLighter);
     display: grid;
-    grid-gap: 2px;
-    grid-template-columns: repeat(5, auto);
-    grid-template-areas: 
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    ". . . negation"
     "clear bracket__right bracket__left divide"
     "seven eight nine times"
     "four five six minus"
@@ -67,7 +68,16 @@ body {
     font-size: 20px;
     font-weight: 400;
 }
+
+.key {
+  border: 0;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+  background-color: rgba(43, 52, 57, 0.2);
+}
 .equal,
+.negation,
 .clear,
 .operator,
 .number,
@@ -75,37 +85,41 @@ body {
 .bracket__right,
 .bracket__left {
     color: var(--colorLightSecond);
-    padding: 5px;
-    background-color: rgba(43, 52, 57, 0.2);
-    border: 0;
-    border-radius: 20px;
-}
 
+ 
+}
+.clear,
+.backspace,
+.operator,
+.equals {
+  color: var(--colorOrange);
+
+}
 .clear {
     grid-area: clear;
-    color: var(--colorOrange)
   }
 
 .backspace {
    grid-area: backspace;
-   color: var(--colorOrange)
+ 
 }
 
 .bracket__right {
     grid-area: bracket__right ;
 }
 
-.bracket__right {
+.bracket__left {
     grid-area: bracket__left ;
   
 }
 
 .divide {
     grid-area: divide;
-    color: var(--colorOrange);
+
 }
 .one {
     grid-area: one;
+   
 }
 .two {
     grid-area: two;
@@ -140,36 +154,30 @@ body {
  
 .equals {
     grid-area: equals;
-    color: var(--colorOrange);
-    opacity: 0.8;
-    border: 0;
-    border-radius: 20px;
-    background-color: rgba(43, 52, 57, 0.2);
-    opacity: 0.8;
+   
   }
 
 .minus {
     grid-area: times;
-    color: var(--colorOrange);
 }
 
 .plus {
     grid-area: minus;
-    color: var(--colorOrange);
 }
 
 .times {
     grid-area: plus;
-    color: var(--colorOrange);
 }
-
-.key {
-  cursor: pointer;
-  padding: 20px;
+.negation {
+  grid-area: negation;
 }
 
 .key:hover {
-    color: var(--colorBlue);
+  background-color: rgba(255, 255, 255, .7);
+}
+.key {
+  cursor: pointer;
+  padding: 20px;
 }
 
 .key:active {
