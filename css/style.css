@@ -52,13 +52,13 @@ body {
   }
 
 .calculator__keys {
-    color: var(--colorLightSecond);
+    
     padding: 0.75rem 1.5rem;
     height: 400px;
     background: var(--colorDarkGreyLighter);
     display: grid;
     grid-gap: 2px;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     "clear bracket__right bracket__left divide"
     "seven eight nine times"
@@ -66,8 +66,20 @@ body {
     "one two three plus"
     "zero decimal equal equal";
     align-items: center;
-    ;
     justify-content: space-around;
+}
+.equal,
+.clear,
+.operator,
+.number,
+.decimal,
+.bracket__right,
+.bracket__left {
+    color: var(--colorLightSecond);
+    padding: 5px;
+    background-color: rgba(43, 52, 57, 0.2);
+    border: 0;
+    border-radius: 20px;
 }
 
 
@@ -82,6 +94,7 @@ body {
 
 .bracket__right {
     grid-area: bracket__left ;
+  
 }
 
 .divide {
@@ -128,8 +141,7 @@ body {
     opacity: 0.8;
     border: 0;
     border-radius: 20px;
-    background-color: rgba(43, 52, 57, 0.2);
-    opacity: 0.8;
+ 
 
   }
 
@@ -147,3 +159,11 @@ body {
     grid-area: plus;
     color: var(--colorOrange);
 }
+
+.calculator__keys > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+  
+}
+
+
+
