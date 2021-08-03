@@ -130,9 +130,9 @@ backspaceKey.addEventListener('click', key => {
     calculator.updateDisplay();
 })
 
-
-module.exports = calculate();
 negation.addEventListener('click', key => {
     calculator.changeSign()
     calculator.updateDisplay()
 })
+
+module.exports = calculate();
