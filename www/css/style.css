@@ -104,7 +104,7 @@ body {
 
 .backspace {
    grid-area: backspace;
- 
+
 }
 
 .bracket__right {
@@ -113,7 +113,7 @@ body {
 
 .bracket__left {
     grid-area: bracket__left ;
-  
+
 }
 
 .divide {
@@ -122,7 +122,7 @@ body {
 }
 .one {
     grid-area: one;
-   
+
 }
 .two {
     grid-area: two;
@@ -134,7 +134,7 @@ body {
     grid-area: four;
   }
 .five {
-    grid-area: five; 
+    grid-area: five;
 }
 .six {
     grid-area: six;
