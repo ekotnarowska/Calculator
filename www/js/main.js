@@ -5,6 +5,7 @@ const backspaceKey = document.querySelector('.backspace');
 const clearKey = document.querySelector('.clear');
 const resultDisplay = document.querySelector('.display__result');
 const inputDisplay = document.querySelector('.display__input');
+const negation = document.querySelector('.negation');
 
 class Calculator {
     constructor(inputDisplay, resultDisplay) {
@@ -24,6 +25,10 @@ class Calculator {
         if (this.input.length < 1) {
             this.input = '0';
         }
+    }
+
+    changeSign() {
+        this.input = -parseFloat(this.input)
     }
 
     insertNumber(number) {
@@ -123,4 +128,9 @@ clearKey.addEventListener('click', key => {
 backspaceKey.addEventListener('click', key => {
     calculator.deleteLastItem();
     calculator.updateDisplay();
+})
+
+negation.addEventListener('click', key => {
+    calculator.changeSign()
+    calculator.updateDisplay()
 })
