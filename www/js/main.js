@@ -124,3 +124,6 @@ backspaceKey.addEventListener('click', key => {
     calculator.deleteLastItem();
     calculator.updateDisplay();
 })
+
+
+module.exports = calculate();

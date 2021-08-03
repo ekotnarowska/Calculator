@@ -1,4 +1,9 @@
 {
+  "name": "calculator",
+  "jest": {
+    "verbose": true
+  },
+  "main": "main.js",
   "devDependencies": {
     "jest": "^27.0.6"
   },
