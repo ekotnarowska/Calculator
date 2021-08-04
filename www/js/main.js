@@ -62,11 +62,18 @@ class Calculator {
                 calculation = previousItem * currentItem;
             break
             case '÷':
-                calculation = previousItem / currentItem;
+                if (currentItem !== 0) {
+                    calculation = previousItem / currentItem; 
+                } else {
+                    this.inputDisplay.innerText = 'Invalid dividend ' + currentItem;
+                    this.resultDisplay.innerText = '';
+                    throw Error('Invalid dividend ' + currentItem);
+                }
             break
             default:
                 return;
         }
+
         this.input = calculation;
         this.operator = undefined;
         this.result = '';
@@ -134,5 +141,3 @@ negation.addEventListener('click', key => {
     calculator.changeSign()
     calculator.updateDisplay()
 })
-
-module.exports = calculate();
