@@ -134,5 +134,3 @@ negation.addEventListener('click', key => {
     calculator.changeSign()
     calculator.updateDisplay()
 })
-
-module.exports = calculate();
