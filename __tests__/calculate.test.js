@@ -20,7 +20,7 @@ describe('calculate', () => {
     expect(calculate(previousItem, currentItem, operator)).toBe(2);
   });
 
-  test('mulitplies 3 * -5 to equal -15', () => {
+  test('mulitplies 3 * -5 to equal -15 and therefore handles negative numbers', () => {
     const previousItem = 3;
     const currentItem = -5;
     const operator = 'x';
@@ -34,7 +34,7 @@ describe('calculate', () => {
     expect(calculate(previousItem, currentItem, operator)).toBe(3);
   });
 
-  test('does not divide by 0', () => {
+  test('does not divide by 0 and handles errors', () => {
     const previousItem = 12;
     const currentItem = 0;
     const operator = '÷';
