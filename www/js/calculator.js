@@ -64,6 +64,7 @@ class Calculator {
             default:
                 return;
         }
+
         this.input = calculation;
         this.operator = undefined;
         this.result = '';
