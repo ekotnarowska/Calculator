@@ -3,7 +3,6 @@
  */
 
  const calculate = require('../www/js/test/calculate');
- const  Calculator = require( '../www/js/calculator');
 
  
  describe('calculate', () => {
@@ -45,20 +44,3 @@
      }).toThrow('Invalid dividend 0');
    });
  });
-
- 
-//  describe('Test number input', () => {
-//   let myCalculator;
-
-//   beforeEach(function() {
-//     let resultDisplay = document.createElement("div");
-//     let inputDisplay = document.createElement("div");
-//     myCalculator = new Calculator(resultDisplay, inputDisplay)
-//   })
-
-//   test("should update the display value with the number", function() {
-//     myCalculator.insertNumber('5')
-//     myCalculator.updateDisplay()
-//     expect(myCalculator.inputDisplay.textContent).toBe('5');
-//   })
-// })

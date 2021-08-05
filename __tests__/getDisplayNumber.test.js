@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const getDisplayNumber = require('.././www/js/getDisplayNumber');
+const getDisplayNumber = require('../www/js/test/getDisplayNumber');
 
 describe('getDisplayNumber', () => {
 
