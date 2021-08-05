@@ -53,7 +53,13 @@ class Calculator {
                 calculation = previousItem * currentItem;
             break
             case '÷':
-                calculation = previousItem / currentItem;
+                if (currentItem !== 0) {
+                    calculation = previousItem / currentItem; 
+                } else {
+                    this.inputDisplay.innerText = 'Invalid dividend ' + currentItem;
+                    this.resultDisplay.innerText = '';
+                    throw Error('Invalid dividend ' + currentItem);
+                }
             break
             default:
                 return;
