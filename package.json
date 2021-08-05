@@ -5,9 +5,12 @@
   },
   "main": "main.js",
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack ./www/js/main.js --output-filename=bundle.js --mode=development"
   }
 }
