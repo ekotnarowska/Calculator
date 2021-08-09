@@ -15,7 +15,7 @@ function calculate(previousItem, currentItem, operator) {
         break
         case '÷':
             if (currentItem !== 0) {
-                calculation = previousItem / currentItem; 
+                calculation = previousItem / currentItem;
             } else {
                 throw Error('Invalid dividend ' + currentItem);
             }
