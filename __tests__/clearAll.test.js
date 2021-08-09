@@ -23,18 +23,11 @@ test('after click the button "AC" clears display and all stored values', () => {
     myCalculator.inputDisplay.innerText = '8';
     myCalculator.resultDisplay.innerText = '16';
 
-    myCalculator.getDisplayNumber(6)
-    console.log('przed')
-    console.log(`input: ${myCalculator.inputDisplay.innerText} `)
-    console.log(`result: ${myCalculator.resultDisplay.innerText} `)
-    
+    //when
     myCalculator.clearAll()
     myCalculator.updateDisplay()
-    console.log('po')
-    console.log(`input: ${myCalculator.inputDisplay.innerText}`)
-    console.log(`result: ${myCalculator.resultDisplay.innerText}`)
+    
     // then
-  
     expect(myCalculator.inputDisplay.innerText).toEqual('0');
     expect(myCalculator.resultDisplay.innerText).toEqual('');
 });
