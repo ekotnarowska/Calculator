@@ -1,4 +1,3 @@
-
 const Calculator = require("./calculator");
 
 document.addEventListener('DOMContentLoaded', () => {
