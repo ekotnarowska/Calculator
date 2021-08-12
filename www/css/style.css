@@ -37,11 +37,12 @@ body {
     justify-content: flex-end;
     background-color: var(--colorDarkGrey);
     color: var(--colorOrange);
-    width:auto;
+    width: 320px;
     height: 160px;
     padding: 1rem;
     font-size: 24px;
     padding-right: 2rem;
+    flex-wrap: wrap;
 }
 
 .display__result {
